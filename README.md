@@ -1,6 +1,7 @@
 # server side users data link:
 
 [server site](https://users-management-server.vercel.app/users)
+[client site](https://user-management-sm.netlify.app/)
 
 # now start to mongoDB lest start ...
 
