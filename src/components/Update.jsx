@@ -12,13 +12,16 @@ const Update = () => {
     const designation = e.target.designation.value;
     const address = e.target.address.value;
     const updateUser = { name, email, designation, address };
-    fetch(`http://localhost:5000/users/${loadedUser._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateUser),
-    })
+    fetch(
+      `https://users-management-server.vercel.app/users/${loadedUser._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateUser),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

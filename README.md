@@ -1,3 +1,7 @@
+# server side users data link:
+
+[server site](https://users-management-server.vercel.app/users)
+
 # now start to mongoDB lest start ...
 
 - using this app to crud operation ...
@@ -7,8 +11,6 @@
 - delete data in data base ...
 
 # continue to step by step ...
-
-
 
 # always package.json file write to a script ..
 
@@ -143,3 +145,28 @@ just fetch
 # projection
 
 - option er vitor sort korer jonno projection er vitor key set kore dewa hoy..
+
+# deploy related
+
+- netlify deploy
+- create a file in public folder that nam was \_redirect
+-
+
+```
+//file name was _redirect
+
+/*    /index.html  200
+
+```
+
+```
+netlify init
+```
+
+```
+netlify deploy
+```
+
+```
+netlify deploy --prod
+```

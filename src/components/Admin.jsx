@@ -8,7 +8,7 @@ const Admin = () => {
     const designation = e.target.designation.value;
     const address = e.target.address.value;
     const user = { name, email, designation, address };
-    fetch(`http://localhost:5000/users`, {
+    fetch(`https://users-management-server.vercel.app/users`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

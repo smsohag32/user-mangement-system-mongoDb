@@ -8,10 +8,9 @@ const Users = () => {
   const allUsers = useLoaderData();
 
   const [users, setUsers] = useState(allUsers);
-  console.log(users);
 
   const handleDeleteUser = (_id) => {
-    fetch(`http://localhost:5000/users/${_id}`, {
+    fetch(`https://users-management-server.vercel.app/users/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
