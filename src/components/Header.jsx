@@ -20,7 +20,7 @@ const Header = () => {
         </Link>
         <Link
           className="text-lg font-bold border-2 border-stone-400 py-1 px-3 hover:border-none hover:text-red-500"
-          to="/"
+          to="/users"
         >
           Users List
         </Link>

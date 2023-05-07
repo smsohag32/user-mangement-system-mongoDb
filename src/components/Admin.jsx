@@ -7,6 +7,22 @@ const Admin = () => {
     const email = e.target.email.value;
     const designation = e.target.designation.value;
     const address = e.target.address.value;
+    const user = { name, email, designation, address };
+    fetch(`http://localhost:5000/users`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert("User create successful");
+          e.target.reset();
+        }
+      });
   };
 
   return (
@@ -17,28 +33,28 @@ const Admin = () => {
       >
         <p className="text-white font-bold text-center text-3xl">Welcome</p>
         <input
-          className="text-xl font-bold py-1 px-2 placeholder:text-black rounded-md"
+          className="text-xl font-bold py-1 px-2 placeholder:text-slate-500 placeholder:ps-2 rounded-md"
           type="text"
           name="name"
           required
           placeholder="name"
         />
         <input
-          className="text-xl font-bold py-1 px-2 placeholder:text-black rounded-md"
+          className="text-xl font-bold py-1 px-2 placeholder:text-slate-500 placeholder:ps-2 rounded-md"
           type="email"
           name="email"
           required
           placeholder="email"
         />
         <input
-          className="text-xl font-bold py-1 px-2 placeholder:text-black rounded-md"
+          className="text-xl font-bold py-1 px-2 placeholder:text-slate-500 placeholder:ps-2 rounded-md"
           type="text"
           name="designation"
           required
           placeholder="designation"
         />
         <input
-          className="text-xl font-bold py-1 px-2 placeholder:text-black rounded-md"
+          className="text-xl font-bold py-1 px-2 placeholder:text-slate-500 placeholder:ps-2 rounded-md"
           type="text"
           name="address"
           required
